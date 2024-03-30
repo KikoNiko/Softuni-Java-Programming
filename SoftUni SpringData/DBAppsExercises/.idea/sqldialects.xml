@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/src/main/java/AddMinion.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ChangeTownNamesCasing.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/GetMinionsNames.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/GetVillainsNames.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/RemoveVillain.java" dialect="GenericSQL" />
+  </component>
+</project>
