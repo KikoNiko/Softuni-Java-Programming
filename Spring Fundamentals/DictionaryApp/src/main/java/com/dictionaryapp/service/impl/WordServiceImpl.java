@@ -1,9 +1,7 @@
 package com.dictionaryapp.service.impl;
 
 import com.dictionaryapp.model.dto.WordAddDTO;
-import com.dictionaryapp.model.entity.Word;
 import com.dictionaryapp.repo.LanguageRepository;
-import com.dictionaryapp.repo.UserRepository;
 import com.dictionaryapp.repo.WordRepository;
 import com.dictionaryapp.service.WordService;
 import com.dictionaryapp.util.UserSession;
