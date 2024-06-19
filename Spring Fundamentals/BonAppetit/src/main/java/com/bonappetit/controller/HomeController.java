@@ -14,17 +14,11 @@ public class HomeController {
 
     @GetMapping("/")
     public String notLoggedView() {
-        if (userSession.isLoggedIn()) {
-            return "redirect:/home";
-        }
-        return "index";
+        return userSession.isLoggedIn() ? "redirect:/home" : "index";
     }
 
     @GetMapping("/home")
     public String loggedUserHomePage(){
-        if (!userSession.isLoggedIn()) {
-            return "redirect:/";
-        }
-        return "home";
+        return userSession.isLoggedIn() ? "home" : "redirect:/";
     }
 }
