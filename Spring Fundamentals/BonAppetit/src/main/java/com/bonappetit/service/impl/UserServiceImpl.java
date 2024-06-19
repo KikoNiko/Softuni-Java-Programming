@@ -48,8 +48,18 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public void logout() {
+        userSession.logout();
+    }
+
+    @Override
     public boolean checkCredentials(String username, String password) {
         Optional<User> byUsername = userRepository.findByUsername(username);
         return byUsername.filter(user -> passwordEncoder.matches(password, user.getPassword())).isPresent();
+    }
+
+    @Override
+    public boolean isLoggedUser() {
+        return userSession.isLoggedIn();
     }
 }

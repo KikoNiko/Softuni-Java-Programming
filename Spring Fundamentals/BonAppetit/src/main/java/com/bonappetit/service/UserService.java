@@ -8,5 +8,9 @@ public interface UserService {
 
     boolean login(UserLoginDTO userLoginDTO);
 
+    void logout();
+
     boolean checkCredentials(String username, String password);
+
+    boolean isLoggedUser();
 }

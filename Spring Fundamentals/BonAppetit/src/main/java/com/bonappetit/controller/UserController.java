@@ -86,4 +86,13 @@ public class UserController {
         userService.login(userLoginData);
         return "redirect:/";
     }
+
+    @GetMapping("/logout")
+    public String logout() {
+        if (!userService.isLoggedUser()) {
+            return "redirect:/login";
+        }
+        userService.logout();
+        return "redirect:/";
+    }
 }
