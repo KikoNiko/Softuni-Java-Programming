@@ -7,9 +7,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.transaction.Transactional;
 import javax.validation.Valid;
 
 @Controller
@@ -44,6 +46,16 @@ public class RecipeController {
 
         recipeService.addRecipe(addRecipeData);
         return "redirect:/";
+    }
+
+    @PostMapping("/add-to-favourites/{recipeId}")
+    @Transactional
+    public String addToFavourites(@PathVariable long recipeId) {
+        if (!userSession.isLoggedIn()) {
+            return "redirect:/";
+        }
+        recipeService.addToFavourites(recipeId);
+        return "redirect:/home";
     }
 
 }

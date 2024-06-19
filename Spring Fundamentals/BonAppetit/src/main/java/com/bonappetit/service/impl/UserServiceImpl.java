@@ -2,6 +2,7 @@ package com.bonappetit.service.impl;
 
 import com.bonappetit.model.dto.UserLoginDTO;
 import com.bonappetit.model.dto.UserRegisterDTO;
+import com.bonappetit.model.entity.Recipe;
 import com.bonappetit.model.entity.User;
 import com.bonappetit.repo.UserRepository;
 import com.bonappetit.service.UserService;
@@ -10,6 +11,8 @@ import org.modelmapper.ModelMapper;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -61,5 +64,12 @@ public class UserServiceImpl implements UserService {
     @Override
     public boolean isLoggedUser() {
         return userSession.isLoggedIn();
+    }
+
+    @Override
+    public List<Recipe> getFavouriteRecipes(long userId) {
+        return userRepository.findById(userId)
+                .map(User::getFavouriteRecipes)
+                .orElseGet(ArrayList::new);
     }
 }

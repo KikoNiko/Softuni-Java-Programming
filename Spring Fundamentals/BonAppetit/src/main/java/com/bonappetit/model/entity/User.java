@@ -17,7 +17,7 @@ public class User extends BaseEntity{
     @OneToMany(mappedBy = "addedBy")
     private List<Recipe> addedRecipes;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     private List<Recipe> favouriteRecipes;
 
     public User() {

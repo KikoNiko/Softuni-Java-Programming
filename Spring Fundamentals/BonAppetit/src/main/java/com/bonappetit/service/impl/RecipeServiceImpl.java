@@ -1,7 +1,9 @@
 package com.bonappetit.service.impl;
 
 import com.bonappetit.model.dto.AddRecipeDTO;
+import com.bonappetit.model.dto.RecipeInfoDTO;
 import com.bonappetit.model.entity.Category;
+import com.bonappetit.model.entity.CategoryName;
 import com.bonappetit.model.entity.Recipe;
 import com.bonappetit.model.entity.User;
 import com.bonappetit.repo.CategoryRepository;
@@ -12,6 +14,7 @@ import com.bonappetit.util.UserSession;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -40,6 +43,23 @@ public class RecipeServiceImpl implements RecipeService {
         mappedRecipe.setCategory(categoryByName);
         mappedRecipe.setAddedBy(userRepository.getById(userSession.getId()));
         recipeRepository.save(mappedRecipe);
+    }
+
+    @Override
+    public List<Recipe> getAllByCategory(CategoryName categoryName) {
+        Category category = categoryRepository.findByName(categoryName);
+        return recipeRepository.getAllByCategory(category);
+    }
+
+    @Override
+    public void addToFavourites(long id) {
+        Optional<Recipe> recipeById = recipeRepository.findById(id);
+        if (recipeById.isEmpty()) {
+            return;
+        }
+        User currentUser = userRepository.getById(userSession.getId());
+        currentUser.getFavouriteRecipes().add(recipeById.get());
+        userRepository.save(currentUser);
     }
 
 }
