@@ -26,4 +26,9 @@ public class CurrentUser {
     public void setLogged(boolean logged) {
         isLogged = logged;
     }
+
+    public void logout() {
+        setUsername("");
+        setLogged(false);
+    }
 }

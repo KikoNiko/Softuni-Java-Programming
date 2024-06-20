@@ -3,10 +3,12 @@ package com.bonappetit.util;
 import com.bonappetit.model.entity.User;
 import com.bonappetit.repo.UserRepository;
 import org.springframework.stereotype.Component;
+import org.springframework.web.context.annotation.SessionScope;
 
 import java.util.Optional;
 
 @Component
+@SessionScope
 public class UserSession {
     private long id;
 

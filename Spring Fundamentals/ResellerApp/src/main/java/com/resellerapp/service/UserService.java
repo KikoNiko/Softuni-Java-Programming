@@ -8,4 +8,8 @@ public interface UserService {
     void register(UserRegisterDTO userRegisterDTO);
 
     void login(UserLoginDTO userLoginDTO);
+
+    void logout();
+
+    boolean checkCredentials(String username, String password);
 }

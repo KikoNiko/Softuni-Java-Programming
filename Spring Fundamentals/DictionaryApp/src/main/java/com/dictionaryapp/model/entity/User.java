@@ -1,9 +1,6 @@
 package com.dictionaryapp.model.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +14,7 @@ public class User extends BaseEntity{
     private String password;
     @Column(nullable = false, unique = true)
     private String email;
-    @OneToMany(mappedBy = "addedBy")
+    @OneToMany(mappedBy = "addedBy", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<Word> addedWords;
 
     public User() {

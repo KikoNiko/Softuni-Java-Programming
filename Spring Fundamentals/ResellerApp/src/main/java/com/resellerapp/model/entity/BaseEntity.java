@@ -3,7 +3,6 @@ package com.resellerapp.model.entity;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import java.util.UUID;

@@ -4,9 +4,16 @@ import com.resellerapp.model.dto.UserLoginDTO;
 import com.resellerapp.model.dto.UserRegisterDTO;
 import com.resellerapp.service.UserService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import javax.validation.Valid;
 
 @Controller
 public class UserController {
@@ -17,29 +24,67 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping("/login")
-    public ModelAndView login() {
-        return new ModelAndView("login");
+    @ModelAttribute("registerData")
+    public UserRegisterDTO registerData() {
+        return new UserRegisterDTO();
     }
-
-    @PostMapping
-    public ModelAndView login(UserLoginDTO userLoginDTO) {
-        userService.login(userLoginDTO);
-
-        return new ModelAndView("redirect:/");
+    @ModelAttribute("loginData")
+    public UserLoginDTO loginData() {
+        return new UserLoginDTO();
+    }
+    @ModelAttribute
+    public void addAttribute(Model model) {
+        model.addAttribute("validCredentials");
     }
 
     @GetMapping("/register")
-    public ModelAndView register() {
-        return new ModelAndView("register");
+    public String registerView() {
+        return "register";
     }
 
     @PostMapping("/register")
-    public ModelAndView register(UserRegisterDTO userRegisterDTO) {
+    public String registerUser(@Valid UserRegisterDTO userRegisterData,
+                               BindingResult bindingResult,
+                               RedirectAttributes redirectAttributes) {
+        if (!userRegisterData.getPassword().equals(userRegisterData.getConfirmPassword())){
+            bindingResult.addError(
+                    new FieldError(
+                            "differentPasswords",
+                            "confirmPassword",
+                            "Passwords don't match.")
+            );
+        }
+        if (bindingResult.hasErrors()) {
+            redirectAttributes.addFlashAttribute("registerData", userRegisterData);
+            redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.registerData", bindingResult);
+            return "redirect:/register";
+        }
+        userService.register(userRegisterData);
+        return "redirect:/login";
+    }
 
+    @GetMapping("/login")
+    public String loginView() {
+        return "login";
+    }
 
-        userService.register(userRegisterDTO);
+    @PostMapping("/login")
+    public String loginUser(@Valid UserLoginDTO userLoginData,
+                            BindingResult bindingResult,
+                            RedirectAttributes redirectAttributes) {
+        if (bindingResult.hasErrors()) {
+            redirectAttributes.addFlashAttribute("loginData", userLoginData);
+            redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.loginData", bindingResult);
+            return "redirect:/login";
+        }
+        boolean validCredentials = userService.checkCredentials(userLoginData.getUsername(), userLoginData.getPassword());
 
-        return new ModelAndView("login");
+        if (!validCredentials) {
+            redirectAttributes.addFlashAttribute("loginData", userLoginData);
+            redirectAttributes.addFlashAttribute("validCredentials", false);
+            return "redirect:/login";
+        }
+        userService.login(userLoginData);
+        return "redirect:/";
     }
 }

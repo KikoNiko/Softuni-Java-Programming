@@ -1,5 +1,6 @@
 package com.dictionaryapp.model.dto;
 
+import com.dictionaryapp.model.entity.LanguageEnum;
 import jakarta.validation.constraints.*;
 
 import java.time.LocalDate;
@@ -16,8 +17,8 @@ public class WordAddDTO {
     @PastOrPresent
     @NotNull
     private LocalDate inputDate;
-    @NotBlank
-    private String language;
+    @NotNull
+    private LanguageEnum language;
 
     public String getTerm() {
         return term;
@@ -51,11 +52,11 @@ public class WordAddDTO {
         this.inputDate = inputDate;
     }
 
-    public String getLanguage() {
+    public LanguageEnum getLanguage() {
         return language;
     }
 
-    public void setLanguage(String language) {
+    public void setLanguage(LanguageEnum language) {
         this.language = language;
     }
 }

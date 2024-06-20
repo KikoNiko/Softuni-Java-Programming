@@ -3,15 +3,19 @@ package com.resellerapp.model.dto;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 
 public class UserRegisterDTO {
     @Length(min = 3, max = 20)
+    @NotBlank
     private String username;
 
     @Email
+    @NotBlank
     private String email;
 
     @Length(min = 3, max = 20)
+    @NotBlank
     private String password;
 
     private String confirmPassword;

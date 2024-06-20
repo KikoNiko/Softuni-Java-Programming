@@ -41,7 +41,7 @@ public class WordController {
                     "org.springframework.validation.BindingResult.wordData", bindingResult);
             return "redirect:/word-add";
         }
-        wordService.add(wordAddDTO);
+        wordService.add(wordAddDTO, userSession.getId());
 
         return "redirect:/home";
     }
