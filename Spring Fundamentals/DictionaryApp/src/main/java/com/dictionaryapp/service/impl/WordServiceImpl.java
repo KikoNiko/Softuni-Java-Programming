@@ -62,7 +62,7 @@ public class WordServiceImpl implements WordService {
         User addedBy = word.getAddedBy();
         List<Word> addedWords = addedBy.getAddedWords();
         addedWords.remove(word);
-        wordRepository.deleteById(word.getId());
+        wordRepository.delete(word);
         userRepository.save(addedBy);
     }
 }
