@@ -9,7 +9,7 @@ import java.util.List;
 public class Priority extends BaseEntity{
     @Column(nullable = false, unique = true)
     @Enumerated(EnumType.STRING)
-    private PriorityEnum name;
+    private PriorityName name;
     @Column(nullable = false)
     private String description;
 
@@ -20,17 +20,17 @@ public class Priority extends BaseEntity{
         this.tasks = new ArrayList<>();
     }
 
-    public Priority(PriorityEnum name, String description) {
+    public Priority(PriorityName name, String description) {
         this();
         this.name = name;
         this.description = description;
     }
 
-    public PriorityEnum getName() {
+    public PriorityName getName() {
         return name;
     }
 
-    public void setName(PriorityEnum name) {
+    public void setName(PriorityName name) {
         this.name = name;
     }
 

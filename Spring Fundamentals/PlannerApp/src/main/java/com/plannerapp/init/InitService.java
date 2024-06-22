@@ -1,7 +1,7 @@
 package com.plannerapp.init;
 
 import com.plannerapp.model.entity.Priority;
-import com.plannerapp.model.entity.PriorityEnum;
+import com.plannerapp.model.entity.PriorityName;
 import com.plannerapp.repo.PriorityRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -18,7 +18,7 @@ public class InitService implements CommandLineRunner {
     public void run(String... args) throws Exception {
         if (priorityRepository.count() == 0) {
             String description = "";
-            for (PriorityEnum priorityName : PriorityEnum.values()) {
+            for (PriorityName priorityName : PriorityName.values()) {
                 switch (priorityName) {
                     case LOW:
                         description = "Should be fixed if time permits but can be postponed.";
