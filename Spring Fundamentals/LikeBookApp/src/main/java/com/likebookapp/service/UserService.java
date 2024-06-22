@@ -14,4 +14,6 @@ public interface UserService {
     void logout();
 
     boolean isUserLoggedIn();
+
+    long getLoggedUserId();
 }

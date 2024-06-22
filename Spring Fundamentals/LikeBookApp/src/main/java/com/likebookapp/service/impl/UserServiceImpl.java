@@ -63,4 +63,10 @@ public class UserServiceImpl implements UserService {
         return userSession.isLoggedIn();
     }
 
+    @Override
+    public long getLoggedUserId() {
+        return userSession.getId();
+    }
+
+
 }

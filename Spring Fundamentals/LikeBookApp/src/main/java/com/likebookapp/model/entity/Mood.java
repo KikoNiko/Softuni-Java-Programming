@@ -11,6 +11,9 @@ public class Mood extends BaseEntity{
     @Enumerated(EnumType.STRING)
     private MoodName name;
 
+    public Mood() {
+    }
+
     public Mood(MoodName name) {
         this.name = name;
     }
