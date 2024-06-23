@@ -96,6 +96,9 @@ public class PaintingServiceImpl implements PaintingService {
         if (painting.isFavorite()) {
             return false;
         }
+        userRepository.findAll().stream().map(User::getRatedPaintings)
+                .filter(p -> p.contains(painting))
+                .forEach(p -> p.remove(painting));
 
         paintingRepository.delete(byId.get());
         return true;
@@ -120,8 +123,10 @@ public class PaintingServiceImpl implements PaintingService {
                 .stream()
                 .filter(p -> p.getVotes() > 0)
                 .sorted(Comparator.comparing(Painting::getVotes)
+                        .reversed()
                         .thenComparing(Painting::getName)
                         .reversed())
+                .limit(2)
                 .map(PaintingDisplayDTO::new)
                 .collect(Collectors.toSet());
 
