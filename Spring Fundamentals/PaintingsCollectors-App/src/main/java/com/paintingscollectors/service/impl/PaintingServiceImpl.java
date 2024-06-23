@@ -100,7 +100,7 @@ public class PaintingServiceImpl implements PaintingService {
                 .filter(p -> p.contains(painting))
                 .forEach(p -> p.remove(painting));
 
-        paintingRepository.delete(byId.get());
+        paintingRepository.delete(painting);
         return true;
     }
 
@@ -121,7 +121,6 @@ public class PaintingServiceImpl implements PaintingService {
     public Set<PaintingDisplayDTO> getMostRated() {
         return paintingRepository.findAll()
                 .stream()
-                .filter(p -> p.getVotes() > 0)
                 .sorted(Comparator.comparing(Painting::getVotes)
                         .reversed()
                         .thenComparing(Painting::getName)
