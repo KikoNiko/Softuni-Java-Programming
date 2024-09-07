@@ -1,0 +1,47 @@
+
+.box-model {
+    width: 50vw;
+    margin: 3em auto;
+}
+
+.box-model div {
+    border: 1px dashed #666;
+    margin: 0 2em 2em 2em;
+}
+
+.box-model div::before {
+    display: block;
+    height: 2em;
+    align-content: center;
+    padding-left: 0.8em;
+}
+
+.box-model .margin {
+    background: lightsalmon;
+}
+
+.box-model .margin::before {
+    content: 'margin';
+}
+
+.box-model .border {
+    background: blanchedalmond;
+}
+
+.box-model .border::before {
+    content: 'border';
+}
+
+.box-model .padding {
+    background: lightgreen;
+}
+
+.box-model .padding::before {
+    content: 'padding';
+}
+
+.box-model .content {
+    background: lightblue;
+    padding: 1em;
+    text-align: center;
+}
