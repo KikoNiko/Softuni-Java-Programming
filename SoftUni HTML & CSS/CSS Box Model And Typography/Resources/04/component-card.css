@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 2em;
+    background: #eee;
+    font-family: Lato, sans-serif;
+}
+
+.card {
+    display: block;
+    width: 20em;
+    margin: 0 auto;
+    background: #fff;
+    color: #333;
+    border-radius: 0.4em;
+    overflow: hidden;
+    box-shadow: 0 0 1em 0 #333;
+    padding-bottom: 0.6em;
+}
+
+.top img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.main {
+    padding-top: 1em;
+    padding-inline: 1.2rem;
+}
+
+.main, .footer {
+    display: block;
+}
+
+.main > strong { 
+    display: block;
+    font-size: 1.1em;
+    padding-bottom: 0.5rem;
+}
+
+.main > span {
+    font-size: 1em;
+}
+
+.footer {
+    display: block;
+    padding-block: 1em;
+    padding-inline: 1.2em;
+}
+
+.footer span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.footer span:first-child {
+    font-weight: bold;
+}
+
+.footer span:last-child {
+    font-style: italic;
+}
+
+
+

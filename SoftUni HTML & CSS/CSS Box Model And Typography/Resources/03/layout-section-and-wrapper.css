@@ -10,9 +10,15 @@ body {
     border: 2px solid green;
 }
 
+.site-section {
+    padding: 2em;
+    margin: 0 0 2em;
+    border: 2px solid black;
+}
+
 .container {
     max-width: 900px;
-    margin: 0 auto;
+    margin: 0 4em 0 4em;
     padding: 2em;
     border: 2px solid blue;
 }
