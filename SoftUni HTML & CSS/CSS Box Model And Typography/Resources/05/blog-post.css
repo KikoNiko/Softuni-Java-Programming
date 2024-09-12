@@ -1,0 +1,31 @@
+html {
+    font-family: Lato sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: inherit;    
+}
+
+.container {
+    border: 1px groove lightgray;
+    border-radius: 0.3em;
+    margin-block: 2em;
+    margin-inline: 4em;
+    padding: 0 2em 2em 2em;
+}
+
+section.first :first-child {
+    font-size: large;
+    font-weight: 400;
+}
+
+section.first :last-child {
+    padding-bottom: 1.5em;
+}
+
+footer {
+    font-style: italic;
+}
