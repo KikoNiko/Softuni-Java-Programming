@@ -17,7 +17,7 @@ body {
     padding-bottom: 0.6em;
 }
 
-.top img {
+img {
     display: block;
     width: 100%;
     height: auto;
@@ -42,23 +42,20 @@ body {
     font-size: 1em;
 }
 
-.footer {
+.card .footer {
     display: block;
     padding-block: 1em;
     padding-inline: 1.2em;
 }
 
-.footer span {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.footer span:first-child {
+.card .footer span:first-child {
     font-weight: bold;
 }
 
-.footer span:last-child {
+.card .footer span:last-child {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     font-style: italic;
 }
 
