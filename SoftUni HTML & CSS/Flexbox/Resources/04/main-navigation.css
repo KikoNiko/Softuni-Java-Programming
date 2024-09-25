@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 2em;
+    font: 16px/1.5 Lato, sans-serif;
+}
+
+section > nav {
+    background: #eee;
+    padding: 0.5em;
+    border: 2px solid #ddd;
+    border-radius: 0.3em;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.3);
+    display: flex;
+}
+
+section > nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+section > nav ul li {
+    background: #fff;
+    padding: 0.5em 1em;
+    border: 1px solid #ccc;
+    border-radius: 0.3em;
+    text-align: center;
+}
+
+section > nav > ul a {
+    color: darkorange;
+    text-decoration: none;
+}
