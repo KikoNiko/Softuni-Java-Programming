@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 15px/1.5 Lato, sans-serif;
+    background: #eee;
+}
+
+.container {
+    background: #fff;
+    max-width: 1200px;
+    margin: 4em auto;
+    padding: 2em;
+    border-radius: 0.3em;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.2); 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.container > * {
+    border: 1px solid #aaa;
+    padding: 1.5em;
+    border-radius: 0.3em;
+}
+
+.container header,
+.container footer {
+    flex: 0 0 100%;
+}
+
+.container main {
+    flex: 0 0 70%;
+}
+
+.container aside {
+    flex: 1 0 auto;
+}
+
+@media (max-width:800px) {
+    .container main {
+        flex-basis: 100%;
+    }
+}
+
