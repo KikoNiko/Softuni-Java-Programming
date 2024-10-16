@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icons and state</title>
+    <link rel="stylesheet" href="icons-and-state.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Login</h2>
+        <form class="loginForm">
+            <div class="email">
+                <div class="labelAndIcon">
+                    <label for="email">Email</label>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <input type="email" name="email" id="email" required>
+                <span>example: konstantin.dankov@gmail.com</span>
+            </div>
+            <div class="password">
+                <div class="labelAndIcon">
+                    <label for="password">Password</label>
+                    <i class="fa-solid fa-key"></i>
+                </div>
+                <input type="password" name="password" id="password" required>
+                <span>minimum 6 characters, letters and numbers, at least 1 special character</span>
+            </div>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+    
+</body>
+</html>
