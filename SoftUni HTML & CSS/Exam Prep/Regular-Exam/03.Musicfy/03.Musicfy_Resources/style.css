@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 14px/1.5 'Lato', sans-serif;
+}
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+section.navbar {
+    background: #000;
+}
+section.navbar nav img {
+    margin: 3px 0;
+    height: 40px;
+}
+nav, nav > * {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+section.plans {
+    position: relative;
+}
+section.plans > * {
+    z-index: 2;
+    position: relative;
+}
+
+section.plans > h2 {
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.music-img {
+    background: #1db954;
+    width: 100%;
+    height: 260px;
+    position: absolute;
+    z-index: 1;
+}
+.music-img img {
+    width: 45%;
+    position: absolute;
+    padding: 15px 0;
+}
+
+.cards {
+    width: 900px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+    justify-content: space-between;
+}
+.price-card {
+    width: 100%;
+    background: white;
+    display: flex;
+    flex: 1 1 calc(50% - 80px);
+    flex-direction: column;
+    gap: 15px;
+    border: 1px solid gray;
+    border-radius: 0.5em;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    color: #54546d;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+.price-card > h2 {
+    text-align: center;
+    margin-top: 10px;
+}
+.price-card > ul {
+    padding: 0 40px;
+    list-style-type: circle;
+}
+.price-card > ul > li {
+    padding: 3px;
+}
+.price-card > a{
+    text-align: center;
+    background: #1db954;
+    color: white;
+    text-decoration: none;
+    border-radius: 2.5em;
+    display: block;
+    width: max-content;
+    margin: 10px auto;
+    padding: 10px 30px;
+    font-weight: 600;
+}
+.price-card .prices {
+    background-color: black;
+    color: white;
+    display: flex;
+    padding: 20px 10px;
+    justify-content: space-around;
+    font-size: 1rem;
+    position: relative;
+}
+.separator {
+    position: absolute;
+    width: 1px;
+    height: 45px;
+    background: silver;
+    top: 10px;
+}
+
+section.dogopal-hero {
+    width: 1300px;
+    margin: 80px auto;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+section.dogopal-hero .dogopal-img img{
+    width: 75%;
+}
+section.dogopal-hero .dogopal-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+section.dogopal-hero .dogopal-text > h3 {
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+section.experience {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+section.experience > h1 {
+    font-size: 2rem;
+}
+.table-container {
+    background: #ccc;
+    width: 900px;
+    margin: auto;
+    border-radius: 0.5em;
+}
+.compare {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px;
+}
+.svg-group {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+}
+.svg-group img {
+    height: 70%;
+}
+.compare:nth-of-type(even) {
+    background-color: rgb(129 216 160);
+}
+
+footer {
+    background: black;
+    color: white;
+    padding: 20px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+
+
+
+
