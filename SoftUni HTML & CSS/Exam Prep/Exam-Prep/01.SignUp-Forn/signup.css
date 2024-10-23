@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(193 189 186);
+    font-family: 'Kode Mono', sans-serif;
+}
+
+.form-container {
+    width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgb(36 51 60);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.buttons-top {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons-top > a {
+    text-decoration: none;
+    padding: 15px;
+    display: flex;
+    flex: 0 0 50%;
+    justify-content: center;
+}
+a.signup {
+    background: rgb(26 177 136);
+    color: rgb(237, 236, 236);
+}
+a.login {
+    background: rgb(67 83 89);
+    color: #bbb;
+}
+h2 {
+    text-align: center;
+    margin: 25px;
+    font-size: 28px;
+    color: rgb(237, 236, 236);
+    font-weight: 100;
+}
+
+.names {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+input {
+    display: flex;
+}
+.emailWrapper, .passwordWrapper {
+    display: flex;
+    margin-bottom: 20px;
+}
+#firstName, #lastName, #email, #password {
+    background: transparent;
+    border: 0.5px solid silver;
+    padding: 8px;
+    font-size: 18px;
+    font-family: 'Kode Mono';
+    font-weight: 600;
+}
+#firstName, #lastName {
+    width: 100%;
+}
+#email, #password {
+    flex-basis: 100%;
+}
+#getStarted {
+    background: rgb(26 177 136);
+    border: none;
+    padding: 15px;
+    color: rgb(237, 236, 236);
+    width: 100%;
+    justify-content: center;
+    font-size: 25px;
+    font-family: 'Kode Mono';
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+
+a.login:hover {
+    background: rgb(23 154 119);
+}
