@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+@import url('⦁	https://fonts.googleapis.com/css2?family=Cormorant+Infant&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font: 16px/1.5 'Karla', 'Cormorant Infant', sans-serif;
+    background: #f8f0e9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+.containerInner {
+    width: 1000px;
+    margin: auto;
+}
+
+.headerSection {
+    background: url(03.Traveler_Resources/images/poster.jpg) no-repeat top center;
+    background-size: 100% 100%;
+    background-color: #3333;
+    background-blend-mode: darken;
+    height: 90vh;
+}
+.logoWrapper {
+    margin: 20px 50px;
+}
+.logoWrapper img{
+    width: 100px;
+}
+.navigation nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navigation nav ul {
+    display: flex;
+    gap: 30px;
+}
+.navigation nav ul li {
+    list-style: none;
+}
+.navigation nav ul li a {
+    text-decoration: none;
+    color: #ffff;
+    font-weight: 600;
+}
+.headerData {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    color: #ffff;
+}
+
+.headerData h1 {
+    font-size: 90px;
+    font-family: 'Cormorant Infant';
+    text-align: center;
+    margin-top: 90px;
+}
+.headerData p {
+    width: 55%;
+    text-align: center;
+    margin: 0 40px;
+}
+
+.customerTestimonial {
+    padding: 50px 0;
+}
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.testimonial span {
+    font-family: 'Karla';
+}
+.testimonial h2 {
+    font-size: 60px;
+    font-family: 'Cormorant Infant';
+    font-style: italic;
+    line-height: 1em;
+    margin-bottom: 1em;
+}
+.supportSection {
+    background: #e14747;
+    color: #ffff;
+}
+.support {   
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 50%;
+}
+.support p {
+    text-align: center;
+    width: 30%;
+}
+.support .title {
+    font-size: 18px;
+    font-family: 'Karla';
+    font-weight: 600;
+}
+
+.understand {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 50px;
+}
+.understand .imgWrapper{
+    display: flex;
+    flex: 1 0;
+}
+.understand .imgWrapper img {
+    width: 100%;
+}
+.understand h2,
+.understand p {
+    text-align: center;
+}
+.understand h2 {
+    font-size: 60px;
+    font-family: 'Karla';
+    line-height: 1em;
+}
+.btn {
+    background-color: #fff;
+    width: fit-content;
+    padding: 5px 20px;
+    border: 1px solid;
+    border-radius: 0.3em;
+    text-align: center;
+}
+.btn:last-of-type {
+    align-self: center;
+}
+.btn a {
+    text-decoration: none;
+    color: #000;
+}
+
+.guideSection {
+    background: #e14747;
+    color: #ffff;
+}
+.guide {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.guide h2 {
+    font-size: 60px;
+    font-family: 'Cormorant Infant';
+    font-weight: 500;
+}
+.guide > p {
+    text-align: center;
+    width: 80%;
+}
+.btn-find {
+    border-radius: 2em;
+    background: #fad87a;
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+}
+
+footer {
+    background: #352b2a;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+}
+footer > * {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.logoWrapperFooter {
+    width: 80px;
+}
+.logoWrapperFooter img {
+    width: 100%;
+}
+.footerLeft {
+    flex-basis: 30%;
+}
+.footerLeft p {
+    color: #ffff;
+}
+.footerLeft span {
+    color: silver;
+    opacity: 0.7;
+}
+.footerRight {
+    flex-basis: 50%;
+}

@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 16px/1.5 'Inter';
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    background: #85dcff;
+    display: flex;
+    gap: 50px;
+    padding: 50px 25px;
+}
+.containerData {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.containerData h1 {
+    width: 90%;
+    font-size: 36px;
+    line-height: 1.2em;
+    font-weight: 700;
+}
+.containerData p {
+    font-size: 12px;
+}
+.containerImage {
+    width: 300px;
+}
+.containerImage img {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+.btn {
+    padding: 7.5px 15px;
+    border-radius: 0.3em;
+}
+.btn a {
+    text-decoration: none;
+    color: black;
+}
+.getStarted {
+    background: #42aa59;
+    border: 1px solid;
+    cursor: pointer;
+}
+.getStarted:hover {
+    background: #000;
+}
+.getStarted:hover a {
+    color: #ffff;
+}
+.learnMore {
+    background: #ffff;
+}
+
+
+
+
