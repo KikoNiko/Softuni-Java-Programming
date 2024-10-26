@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #fff;
+    font: 14px/1.5 'Poppins', sans-serif;
+}
+a, p, h1, h2, h3, h4, h5 {
+    font: inherit;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+li {
+    list-style: none;
+}
+
+.innerContainer {
+    max-width: 900px;
+    margin: auto;
+    padding: 0 5px;
+}
+.logo {
+    display: flex;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+}
+.logo a {
+    color: #f195b2;
+    font-size: 44px;
+    font-weight: 800;
+}
+.logo span {
+    color: #62c3e7;
+}
+
+.topSection {
+    background: #f195b2;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    padding-bottom: 50px;
+    position: relative;
+}
+.topSection .top {
+    color: #fff;
+    display: flex;
+    gap: 15px;
+}
+.line {
+    width: 1px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    background: #fff;
+}
+.socials {
+    display: flex;
+    gap: 20px;
+    color: #fff;
+}
+
+.navigation {
+    background: #fff;
+    border-radius: 5em;
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 60px;
+}
+nav ul {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+nav ul li a {
+    font-weight: 600;
+}
+.headerSection {
+    background: url('images/carousel-1.jpg') no-repeat top center;
+    background-size: cover;
+    background-color: #3333;
+    background-blend-mode: darken;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.headerInner {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.headerInner > * {
+    color: #fff;
+    text-align: center;
+    line-height: 1em;
+}
+.headerInner h4 {
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.headerInner h1 {
+    font-size: 80px;
+    font-weight: 600;
+    width: 100%;
+}
+.btn {
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 1.5em;
+}
+.btn > a {
+    color: #fff;
+}
+.btn-learn {
+    background: #f195b2;
+}
+
+main {
+    background: #c8e7f8;
+    height: 80%;
+    padding: 50px 10px;
+}
+.mainInner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.pinkLine {
+    background: #f195b2;
+    width: 10%;
+    height: 3px;
+}
+.mainInner h3 {
+    font-size: 36px;
+    font-weight: 600;
+}
+.mainInner article {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+.mainInner h3,
+.mainInner article p,
+.mainInner article h3,
+.mainInner article h4 {
+    opacity: 0.7;
+}
+.mainInner h4 {
+    font-size: 23px;
+}
+.aboutUs, .features {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 0 0 30%;
+    justify-content: center;
+}
+.btn-blue {
+    background: #62c3e7;
+}
+.media {
+    flex: 1 0;
+}
+.media img {
+    max-width: 100%;
+}
+.features p {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.features p i {
+    color: #62c3e7;
+}
+.bold {
+    font-weight: 700;
+}
+
+.footerData {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    opacity: 0.7;
+}
+.footerData .icons {
+    display: flex;
+    gap: 10px;
+}
+.footerData .icons i {
+    padding: 15px;
+    border: 3px solid #62c3e7;
+    color: #62c3e7;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+.footerData .info {
+    display: flex;
+    gap: 10px;
+}
+.left {
+    text-align: end;
+}
+.footerData .middle {
+    width: 1px;
+    background: #000;
+}
+
+.pink {
+    color: #f195b2;
+}
