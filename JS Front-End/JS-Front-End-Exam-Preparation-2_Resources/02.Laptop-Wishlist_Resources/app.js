@@ -41,7 +41,7 @@ function solve() {
     createElement('p', { textContent: `Price: ${price}$` }, articleEl);
     createElement('button', { className: 'btn edit', textContent: 'edit', onclick: editHandler }, entryEl);
     createElement('button', { className: 'btn ok', textContent: 'ok', onclick: okHandler }, entryEl);
-}
+  }
 
   function addHandler(e) {
     e.preventDefault();

@@ -36,7 +36,7 @@ function solve() {
     const buttonsEl = createElement('div', { className: 'buttons'}, entryEl);
     createElement('button', { className: 'edit-btn', textContent: 'Edit', onclick: handleEditEvent }, buttonsEl);
     createElement('button', { className: 'next-btn', textContent: 'Next', onclick: handleNextEvent }, buttonsEl);
-}
+  }
 
   function handleAddEvent(e) {
     e.preventDefault();
